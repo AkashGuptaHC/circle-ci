@@ -1,7 +1,7 @@
 pid_file = "./pidfile"
 exit_after_auth = true
 vault {
-  address = "${VAULT_ADDR}"
+  address = "http://192.168.72.3:8200"
   retry {
     num_retries = -1
   }
@@ -10,7 +10,7 @@ auto_auth {
   method "jwt" {
     exit_on_err = true
     config = {
-      role = "${VAULT_ROLE}"
+      role = "circleci-demo"
       path = ".circleci/vault/token.json"
       remove_jwt_after_reading = false
     }
