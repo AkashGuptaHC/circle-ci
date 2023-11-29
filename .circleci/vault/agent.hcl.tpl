@@ -7,12 +7,10 @@ vault {
   }
 }
 auto_auth {
-  method "jwt" {
-    exit_on_err = true
+  method {
+    type = "token_file"
     config = {
-      role = "circleci-demo"
-      path = ".circleci/vault/token.json"
-      remove_jwt_after_reading = false
+      path = ".circleci/vault/.vault-token"
     }
   }
   sink "file" {
