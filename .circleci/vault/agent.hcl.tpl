@@ -20,7 +20,7 @@ auto_auth {
       path = "/tmp/vault-token"
     }
   }
-}}
+}
 template_config {
   exit_on_retry_failure = true
 }
