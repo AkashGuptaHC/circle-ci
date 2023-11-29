@@ -26,7 +26,7 @@ commands:
             # This config indicates which secrets to collect and how to authenticate     
             vault agent -config=.circleci/vault/agent.hcl
       - run:
-          name: Set Environment Variables from Vault Ji
+          name: Set Environment Variables from Vault
           command: |
             # In order to properly expose values in Environment, we _source_ the shell values written by agent
             source .circleci/vault/setenv
