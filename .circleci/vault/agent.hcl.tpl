@@ -1,7 +1,7 @@
 pid_file = "./pidfile"
 exit_after_auth = true
 vault {
-  address = "http://192.168.73.3:8200"
+  address = "https://e479-103-208-68-174.ngrok-free.app"
   retry {
     num_retries = -1
   }
