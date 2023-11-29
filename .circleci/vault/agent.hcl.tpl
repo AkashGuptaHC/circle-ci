@@ -1,7 +1,7 @@
 pid_file = "./pidfile"
 exit_after_auth = true
 vault {
-  address = "http://192.168.72.3:8200"
+  address = "http://192.168.73.3:8200"
   retry {
     num_retries = -1
   }
