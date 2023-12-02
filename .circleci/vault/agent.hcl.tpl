@@ -1,7 +1,7 @@
 pid_file = "./pidfile"
 exit_after_auth = true
 vault {
-  address = "https://e479-103-208-68-174.ngrok-free.app"
+  address = "${VAULT_ADDR}"
   retry {
     num_retries = -1
   }
@@ -10,7 +10,7 @@ auto_auth {
   method "jwt" {
     exit_on_err = true
     config = {
-      role = "circleci-demo"
+      role = "${VAULT_ROLE}"
       path = ".circleci/vault/token.json"
       remove_jwt_after_reading = false
     }
